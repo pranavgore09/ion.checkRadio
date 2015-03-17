@@ -144,12 +144,14 @@
                 var checkOn = function () {
                     $input.prop("checked", "checked");
                     $input.trigger("change");
+		     $input.focus();
                     $("input[name='"+name+"']").trigger("stateChanged");
                 };
 
                 var checkOff = function () {
                     $input.removeProp("checked");
                     $input.trigger("change");
+		     $input.blur();
                     $("input[name='"+name+"']").trigger("stateChanged");
                 };
 
